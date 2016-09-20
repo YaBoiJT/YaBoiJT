@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 		<script src="js/streamFunctions.js"></script>
+		<script src="js/vods.js"></script>
 		<script src="js/status.js"></script>
 	</head>
 	<body class="landing">
@@ -14,7 +15,7 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><img src="img/logo.jpg" width="45" height="45" style="vertical-align:middle; margin-right: 5px;"/><a href="https://www.twitch.tv/yaboijt_gaming" target="_blank">Twitch.tv/YaBoiJT_Gaming</a></h1>
+					<h1 id="logo"><a href="https://www.twitch.tv/yaboijt_gaming" target="_blank"><img src="img/logo.jpg" width="45" height="45" style="vertical-align:middle; margin-right: 5px;"/><span class="hidden-tablet hidden-phone">Twitch.tv/YaBoiJT_Gaming</span></a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
@@ -31,7 +32,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<div class="content">
-						<header style="text-align: center;">
+						<header style="text-align: center;" class="hidden-phone">
 							<h2>YaBoiJT</h2>
 							<h5 id="liveStatus" style="margin-top:-15px;"></h5>
 							<style type="text/css">
@@ -50,144 +51,49 @@
 						<div class="videobox">					
 						<p id="title"></p>
 						<h5 id="streaminfo" style="color:#FFF;"></h5>
-						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="" height="360" width="640"/>
-						
-						<span class="button-play" style="margin-top:200px;" id="playButton"><a class="button big" onclick="pressPlay(); return false;"><strong style="color:#FFF;">Start Watching</strong></a></span>
-						<iframe style="z-index:2;" id="player" class="twitch-player" height="360" width="640" frameborder="0" margin="0" src="" allowfullscreen></iframe>
+						<a href="#" onclick="javascript:window.open('http://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650');" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
+						<br />
+						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="" height="450" width="800"/>		
+						<span class="button-play" style="margin-top:285px;" id="playButton"><a class="button big" onclick="pressPlay(); return false;"><strong style="color:#FFF;">Start Watching</strong></a></span>
+						<iframe style="z-index:2;" id="player" class="twitch-player" height="450" width="800" frameborder="0" margin="0" src="" allowfullscreen></iframe>
 						</div>
 						</header>
+						<header style="text-align: center;" class="visible-phone">
+							<h1 style="font-size: 40px;">YaBoiJT</h1>
+							<p>This is the mobile homepage. Use the menu to navigate.</p>
+							
+						</header>
 					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
+					<a href="#one" class="goto-next scrolly hidden-phone">Next</a>
 				</section>
 
 			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
+				<section id="one" class="spotlight style1 bottom hidden-phone">
 					<span class="image fit main"><img src="img/pic02.jpg" alt="" /></span>
 					<div class="content">
 						<div class="container">
 							<div class="row">
 								<div class="4u 12u$(medium)">
 									<header>
-										<h2>Odio faucibus ipsum integer consequat</h2>
-										<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
+										<h2>More Content from JT</h2>
+										<p>Various other streams &amp; videos</p>
+										<p style="font-size: 18px; margin-top: -40px;">Click thumbnails to view</p>
 									</header>
 								</div>
 								<div class="4u 12u$(medium)">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p>
+									<a id="vod1link" href="" target="_blank"><img id="vod1img" src="" class="nodrag" /></a>
 								</div>
-								<div class="4u$ 12u$(medium)">
-									<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-									ipsum dolor nullam.</p>
+								<div class="4u$ 12u$(medium) hidden-tablet">
+									<a id="vod2link" href="" target="_blank"><img id="vod2img" src="" class="nodrag" /></a>
+								</div>
+								<div style="text-align: center;">
 								</div>
 							</div>
 						</div>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="img/pic03.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Interdum amet non magna accumsan</h2>
-							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="img/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Interdum felis blandit praesent sed augue</h2>
-							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
-							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
-						</header>
-						<div class="box alt">
-							<div class="row uniform">
-								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-area-chart"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="4u$ 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-paper-plane"></span>
-									<h3>Non semper interdum</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-file"></span>
-									<h3>Odio laoreet accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="4u$ 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-lock"></span>
-									<h3>Massa arcu accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions">
-								<li><a href="#" class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
-
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<form method="post" action="#" class="container 50%">
-							<div class="row uniform 50%">
-								<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="4u$ 12u$(xsmall)"><input type="submit" value="Get Started" class="fit special" /></div>
-							</div>
-						</form>
-					</div>
-				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
@@ -196,7 +102,7 @@
 						<li><a href="https://www.youtube.com/c/yaboijt" class="icon alt fa-youtube-play"><span class="label">YouTube</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; YaBoiJT 2016. All rights reserved.</li><li>Developed by <a href="https://mattunderscore.co">mattunderscore</a></li><li>Designed by <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
 

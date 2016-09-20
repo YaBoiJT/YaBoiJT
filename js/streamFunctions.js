@@ -28,21 +28,6 @@ $.ajax({
    }
  }
 });	
-		$.ajax({
-		url: "https://api.rtainc.co/twitch/uptime?channel=pandaplayshd",
-		success: function (data) {
-			var name = data.split(' ');
-			if (name[1] == "is" && name[2] == "not")
-			{
-				document.getElementById('uptime').textContent = "(uptime api error)";
-			}
-			else
-			{
-			document.getElementById('uptime').textContent = "(" + data + " uptime)";
-			}
-		},
-		dataType: "html"
-		});
 	}
 	
 	getInfo();
@@ -54,11 +39,11 @@ function onlineFrame()
 	document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + username + "-1280x720.jpg";
 	pressPlay = function() {
 		document.getElementById('playButton').style.visibility = "hidden";
-		document.getElementById('vod-thumbnail').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?channel=" + username +"&muted";
+		setTimeout(function() {
+		document.getElementById('vod-thumbnail').style.visibility = "hidden";
+		}, 500);	
 		}
-		
-	document.getElementById('chatframe').src = "https://twitch.tv/" + username + "/chat";
 }
 
 function streamOffline()
@@ -79,7 +64,7 @@ function streamOffline()
 			document.getElementById('button-play-link').style.visibility = "hidden";
 		}
 	   	 
-		 var thumbRaw;
+		var thumbRaw;
 		if (data.videos[0].thumbnails[2] == null)
 		{
 		thumbRaw = data.videos[0].thumbnails[0].url;
@@ -97,8 +82,10 @@ function streamOffline()
 		
 		pressPlay = function() {
 		document.getElementById('playButton').style.visibility = "hidden";
-		document.getElementById('vod-thumbnail').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?video=" + data.videos[0]._id;
+		setTimeout(function() {
+		document.getElementById('vod-thumbnail').style.visibility = "hidden";
+		}, 500);
 		}
 
 		
