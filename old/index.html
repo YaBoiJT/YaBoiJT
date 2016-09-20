@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>YaBoiJT</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/streamFunctions.js"></script>
+		<script src="js/status.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+	</head>
+	<body class="landing">
+
+		<!-- Header -->		
+			<header id="header">
+				<div class="container">
+				<h1><a href="https://www.twitch.tv/yaboijt_gaming">Twitch.tv/YaBoiJT_Gaming</a></h1>
+				<nav>
+					<ul>
+						<li><strong><a>Home</a></strong></li>
+						<li><a href="schedule">Schedule</a></li>
+						<li><a>Page2</a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>YaBoiJT</h2>
+				<h5 id="liveStatus" style="color:#FFF; margin-top:-25px;"></h5>
+				<style type="text/css">
+				.videobox { position: relative; }
+				
+				.videobox span {
+				  display: block;
+				  position: absolute;
+				  top: 0;
+				  left: 0;
+				  bottom: 0;
+				  right: 0;
+				  z-index: 4;
+				}
+				</style>
+			<div class="videobox">
+			<p id="title" style="margin-bottom:10px;"></p>
+			<h5 id="streaminfo" style="color:#FFF;"></h5>
+			<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="" height="659" width="1170"/>
+			<span class="button-play" style="margin-top:275px;" id="playButton"><a class="button big" onclick="pressPlay(); return false;"><strong style="color:#FFF;">Start Watching</strong></a></span>
+            <iframe style="z-index:2;" id="player" class="twitch-player" height="659" width="1170" frameborder="0" margin="0" src="" allowfullscreen></iframe>
+			</div>
+				
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+					</div>
+					<ul class="copyright">
+						<li>&copy; YaBoiJT 2016. All rights reserved.</li>
+						<li>Developed in part by <a href="https://mattunderscore.co">mattunderscore</a> and <a href="https://templated.co">TEMPLATED</a></li>
+						<li>Images provided by <a href="https://wallup.net">wallup.net</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
