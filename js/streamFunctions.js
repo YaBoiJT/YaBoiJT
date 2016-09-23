@@ -17,7 +17,13 @@ $.ajax({
  },
  success: function(data) {
    console.log(data);
-   document.getElementById('title').textContent = data.stream.channel.status;
+   
+   var title = data.stream.channel.status;
+	   
+	var linkedTitle = title.replace("@YaBoiJT_", "<a href='https://twitter.com/yaboijt_'>@YaBoiJT_</a>");
+   
+   document.getElementById('title').innerHTML = linkedTitle;
+   
    if (data.stream.game == "Creative")
    {
 	   document.getElementById('streaminfo').textContent = "Being " + data.stream.game + " for " + data.stream.viewers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " viewers and " + data.stream.channel.followers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " followers";
@@ -78,7 +84,10 @@ function streamOffline()
 		document.getElementById('vod-thumbnail').src = thumbHD;
 		document.getElementById('title').textContent = "Most recent broadcast:";
 		document.getElementById('liveStatus').textContent = "is currently offline";
-		document.getElementById('streaminfo').textContent = " " + data.videos[0].title;
+		var title = data.videos[0].title;
+		var linkedTitle = title.replace("@YaBoiJT_", "<a href='https://twitter.com/yaboijt_'>@YaBoiJT_</a>");
+   
+		document.getElementById('streaminfo').innerHTML = linkedTitle;
 		
 		pressPlay = function() {
 		document.getElementById('playButton').style.visibility = "hidden";
