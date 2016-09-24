@@ -53,6 +53,14 @@
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 }
+.greenLine {
+background: #1CE736;
+content: '';
+display: inline-block;
+height: 0.2em;
+max-width: 20em;
+width: 75%;
+}
 
 /* responsive stuff */
 .hidden {
