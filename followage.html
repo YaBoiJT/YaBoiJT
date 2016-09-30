@@ -12,7 +12,7 @@
 			var username = document.getElementById('username').value;
 			
 			$.ajax({
-			url: "https://api.rtainc.co/twitch/followers/length?channel=yaboijt_gaming&name=" +username,
+			url: "https://api.rtainc.co/twitch/channels/yaboijt_gaming/followers/" + username + "?format=[2]",
 			success: function (data) {
 			
 			var displayUsername;
@@ -36,6 +36,10 @@
 					}
 					 }
 					});
+			if (username != "")
+			{
+				
+					
 			setTimeout(function() {
 			document.getElementById('result').innerHTML = "<img src='img/loading-bar.gif' class='nodrag' />";
 			document.getElementById('prefix').innerHTML = 
@@ -46,6 +50,17 @@
 			setTimeout(function() {
 			document.getElementById('result').textContent = data;
 			}, 2000);
+			}
+			else 
+			{
+			document.getElementById('prefix').textContent = "";
+			document.getElementById('result').innerHTML = "<img src='img/loading-bar.gif' class='nodrag' />";
+			
+			setTimeout(function() {
+			document.getElementById('result').textContent = "(error)";
+			}, 2000);
+			
+			}
 			
 			
 			
@@ -90,9 +105,9 @@
 						</header>
 
 						<!-- Text -->
-							<section style="margin: auto; text-align:center;">
-								<input type="text" id="username" placeholder="Twitch Username" style="text-align: center; color: white; width: 180px; margin: auto;"> 
-								<input class="button special" type="button" onclick="getFollowage()" style="margin-top: 5px; width: 180px;" value="Check Followage">
+								<input type="text" id="username" placeholder="Twitch Username" style="font-size: 14px; text-align: center; color: white; width: 180px; margin: auto;" autofocus> 
+								<section style="margin: auto; text-align:center;">
+								<input class="button special" type="button" onclick="getFollowage()" style="font-size: 12px; margin-top: 5px; width: 180px;" value="Check Followage">
 								<div style="margin-top: 10px;">
 								<h5 id="prefix" style="font-size: 20px"></h5>
 								<h1 id="result" style="font-size: 40px"></h1>
