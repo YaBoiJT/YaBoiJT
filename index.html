@@ -9,7 +9,7 @@
 		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 		<script src="js/streamFunctions.js?revision=9-22-16"></script>
 		<script src="js/vods.js"></script>
-		<script src="js/status.js?revision=10-01-2016"></script>
+		<script src="js/status.js?revision=10-02-2016"></script>
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
@@ -53,7 +53,7 @@
 						<div class="videobox">					
 						<h4 id="title"></h4>
 						<h5 id="streaminfo" style="color:#FFF;"></h5>
-						<a href="#" onclick="javascript:window.open('https://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
+						<a id="popout-chat" href="#" onclick="javascript:window.open('https://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
 						<br />
 						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="" height="450" width="800"/>		
 						<span class="button-play" style="margin-top:285px;" id="playButton"><a class="button big" onclick="pressPlay(); return false;"><strong style="color:#FFF;">Start Watching</strong></a></span>
