@@ -6,7 +6,44 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
-		<script type="text/javascript">
+		<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="https://www.twitch.tv/yaboijt_gaming" target="_blank"><img src="img/logo.jpg" width="45" height="45" class="nodrag" style="vertical-align:middle; margin-right: 5px;"/><span class="hidden-tablet hidden-phone">Twitch.tv/YaBoiJT_Gaming</span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="//jt.mattunderscore.co">Home</a></li>
+							<li><a href="about">About</a></li>
+							<li><a href="rules">Chat Rules</a></li>
+							<li><a href="specs">PC Specs</a></li>
+							<li><a href="social">Social Links</a></li>
+							<li><a href="schedule">Stream Schedule</a></li>
+							<li><a href="support">Support JT</a></li>
+						</ul>
+					</nav>
+				</header>
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Followage</h2>
+							<p>How long have you been following JT?</p>
+						</header>
+
+						<!-- Text -->
+								<input type="text" id="username" placeholder="Twitch Username" style="font-size: 14px; text-align: center; color: white; width: 180px; margin: auto;" autofocus> 
+								<section style="margin: auto; text-align:center;">
+								<input id="followageButton" class="button special" type="button" onclick="getFollowage()" style="font-size: 12px; margin-top: 5px; width: 180px;" value="Check Followage" />
+								<div style="margin-top: 10px;">
+								<h5 id="prefix" style="font-size: 20px"></h5>
+								<h1 id="result" style="font-size: 40px"></h1>
+								</div>
+							</section>
+							<script type="text/javascript">
 			function getFollowage(){
 			
 			var username = document.getElementById('username').value;
@@ -75,44 +112,13 @@
 			}, 2000);}
 			});
 			}
+			
+			$("#username").keyup(function(event){
+			if(event.keyCode == 13){
+			$("#followageButton").click();
+			}
+			});
 			</script>
-
-	</head>
-	<body>
-		<div id="page-wrapper">
-
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="https://www.twitch.tv/yaboijt_gaming" target="_blank"><img src="img/logo.jpg" width="45" height="45" class="nodrag" style="vertical-align:middle; margin-right: 5px;"/><span class="hidden-tablet hidden-phone">Twitch.tv/YaBoiJT_Gaming</span></a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="//jt.mattunderscore.co">Home</a></li>
-							<li><a href="about">About</a></li>
-							<li><a href="rules">Chat Rules</a></li>
-							<li><a href="specs">PC Specs</a></li>
-							<li><a href="social">Social Links</a></li>
-							<li><a href="schedule">Stream Schedule</a></li>
-							<li><a href="support">Support JT</a></li>
-						</ul>
-					</nav>
-				</header>
-			<!-- Main -->
-				<div id="main" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2>Followage</h2>
-							<p>How long have you been following JT?</p>
-						</header>
-
-						<!-- Text -->
-								<input type="text" id="username" placeholder="Twitch Username" style="font-size: 14px; text-align: center; color: white; width: 180px; margin: auto;" autofocus> 
-								<section style="margin: auto; text-align:center;">
-								<input class="button special" type="button" onclick="getFollowage()" style="font-size: 12px; margin-top: 5px; width: 180px;" value="Check Followage">
-								<div style="margin-top: 10px;">
-								<h5 id="prefix" style="font-size: 20px"></h5>
-								<h1 id="result" style="font-size: 40px"></h1>
-								</div>
-							</section>
 					</div>
 				</div>
 
