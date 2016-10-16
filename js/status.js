@@ -30,8 +30,10 @@ $.ajax({
 		
 		pressPlay = function() {
 		document.getElementById('playButton').style.visibility = "hidden";
-		document.getElementById('vod-thumbnail').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?channel=" + data.hosts[0].target_login +"&muted";
+		setTimeout(function() {
+		document.getElementById('vod-thumbnail').style.visibility = "hidden";
+		}, 500);
 		}
 		function getHostInfo() {
 		$.ajax({
