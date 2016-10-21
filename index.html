@@ -6,11 +6,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css?revision=9-24-16" />
-		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 		<script src="js/streamFunctions.js?revision=9-22-16"></script>
 		<script src="js/vods.js"></script>
-		<script src="js/fallbackAPI.js"></script>
-		<script src="js/status.js?revision=10-16-2016"></script>
+		<script src="js/fallbackAPI.js?revision=10-20-2016"></script>
+		<script src="js/status.js?revision=10-20-2016"></script>
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
@@ -84,10 +84,10 @@
 									</header>
 								</div>
 								<div class="4u 12u$(medium)" style="margin-left: -25px;">
-									<a id="vod1link" href="" target="_blank"><img id="vod1img" src="" class="nodrag" /></a>
+									<a id="vod1link" href="" target="_blank"><img id="vod1img" src="" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" /></a>
 								</div>
 								<div class="4u$ 12u$(medium) hidden-tablet" style="margin-left: 15px;">
-									<a id="vod2link" href="" target="_blank"><img id="vod2img" src="" class="nodrag" /></a>
+									<a id="vod2link" href="" target="_blank"><img id="vod2img" src="" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';"/></a>
 								</div>
 								<div style="text-align: center;">
 								</div>

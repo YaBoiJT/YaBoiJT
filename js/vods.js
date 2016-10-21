@@ -7,9 +7,14 @@ $.ajax({
  success: function(data) {
    console.log(data);
    var thumbRaw;
-		if (data.videos[1].thumbnails[2] == null)
+   
+		if (data.videos[1].thumbnails[0] == null)
 		{
-		thumbRaw = data.videos[1].thumbnails[0].url;
+			thumbRaw = "https://placehold.it/400x225"
+		}
+		else if (data.videos[1].thumbnails[2] == null)
+		{
+			thumbRaw = data.videos[1].thumbnails[0].url;
 		}
 		else {thumbRaw = data.videos[1].thumbnails[2].url;}
 	   
@@ -36,3 +41,7 @@ $.ajax({
    document.getElementById('vod2img').src = thumbHD2;
  }
 });	
+
+$('#vod1img').error(function() {
+  alert('Image does not exist !!');
+});
