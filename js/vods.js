@@ -42,6 +42,3 @@ $.ajax({
  }
 });	
 
-$('#vod1img').error(function() {
-  alert('Image does not exist !!');
-});
