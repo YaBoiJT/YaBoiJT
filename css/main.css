@@ -62,6 +62,29 @@ max-width: 20em;
 width: 75%;
 }
 
+
+.aboutImg {
+	width: 300px;
+	height: 400px;
+}
+
+@media (max-width: 767px) {
+	.aboutImg {
+		width: 250px;
+		height: 334px;
+	}
+}
+
+table.streamSchedule caption {
+	caption-side: bottom;
+	font-size: 14px;
+}
+
+section.support img {
+	height: 50px;
+	width: 50px;
+}
+
 /* responsive stuff */
 .hidden {
   display: none;
