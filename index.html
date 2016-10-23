@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>YaBoiJT</title>
-		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="shortcut icon" href="img/favicon.ico" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css?revision=release" />
@@ -11,13 +11,26 @@
 		<script src="js/vods.js"></script>
 		<script src="js/fallbackAPI.js?revision=10-20-2016"></script>
 		<script src="js/status.js?revision=10-20-2016"></script>
+		<style type="text/css">
+		.videobox { position: relative; }
+		
+		.videobox span {
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+		  z-index: 4;
+		}
+		</style>
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="https://www.twitch.tv/yaboijt_gaming" target="_blank"><img src="img/logo-transparent.png" width="45" height="45" class="nodrag" style="vertical-align:middle; margin-right: 5px;"/><span class="hidden-tablet hidden-phone">Twitch.tv/YaBoiJT_Gaming</span></a></h1>
+					<h1 id="logo"><a href="https://www.twitch.tv/yaboijt_gaming" target="_blank"><img src="img/logo-transparent.png" width="45" height="45" class="nodrag" style="vertical-align:middle; margin-right: 5px;" alt="logo" /><span class="hidden-tablet hidden-phone">Twitch.tv/YaBoiJT_Gaming</span></a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="//jt.mattunderscore.co"><strong>Home</strong></a></li>
@@ -38,27 +51,14 @@
 							<h2>YaBoiJT</h2>
 							<h5 id="liveStatus" style="margin-top:-15px;"></h5>
 							<span class="greenLine"></span>
-							<style type="text/css">
-							.videobox { position: relative; }
-							
-							.videobox span {
-							  display: block;
-							  position: absolute;
-							  top: 0;
-							  left: 0;
-							  bottom: 0;
-							  right: 0;
-							  z-index: 4;
-							}
-							</style>
 						<div class="videobox">					
 						<h4 id="title"></h4>
 						<h5 id="streaminfo" style="color:#FFF;"></h5>
 						<a id="popout-chat" href="#" onclick="javascript:window.open('https://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
 						<br />
-						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="" height="450" width="800" onerror="this.src='img/vod-thumbnail-error-lg.png';" />		
+						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="#" height="450" width="800" onerror="this.src='img/vod-thumbnail-error-lg.png';" />		
 						<span class="button-play" style="margin-top:285px;" id="playButton"><a class="button big" onclick="pressPlay(); return false;"><strong style="color:#FFF;">Start Watching</strong></a></span>
-						<iframe style="z-index:2; resize: both;" id="player" class="twitch-player" height="450" width="800" frameborder="0" margin="0" src="" allowfullscreen></iframe>
+						<iframe style="z-index:2; resize: both; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
 						</div>
 						</header>
 						<header style="text-align: center;" class="visible-phone">
@@ -84,10 +84,10 @@
 									</header>
 								</div>
 								<div class="4u 12u$(medium)" style="margin-left: -25px;">
-									<a id="vod1link" href="" target="_blank"><img id="vod1img" src="" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" /></a>
+									<a id="vod1link" href="" target="_blank"><img id="vod1img" src="#" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" alt="thumbnail 1" /></a>
 								</div>
 								<div class="4u$ 12u$(medium) hidden-tablet" style="margin-left: 15px;">
-									<a id="vod2link" href="" target="_blank"><img id="vod2img" src="" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';"/></a>
+									<a id="vod2link" href="" target="_blank"><img id="vod2img" src="#" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" alt="thumbnail 2" /></a>
 								</div>
 								<div style="text-align: center;">
 								</div>
