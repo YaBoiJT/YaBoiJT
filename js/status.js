@@ -44,6 +44,8 @@ $.ajax({
 		 },
 		 success: function(data) {
 		   console.log(data);
+		   
+		   if (data.stream) {
 		   document.getElementById('title').innerHTML = data.stream.channel.status;
 		   if (data.stream.game == "Creative")
 		   {
@@ -53,6 +55,9 @@ $.ajax({
 		   
 		   document.getElementById('streaminfo').textContent = "Playing " + data.stream.game + " for " + data.stream.viewers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " viewers and " + data.stream.channel.followers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " followers";
 		   }
+		   
+		   } //endif stream
+		   else {streamOffline():}
 		 }
 		});
 
