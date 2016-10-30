@@ -57,7 +57,7 @@ $.ajax({
 		   }
 		   
 		   } //endif stream
-		   else {streamOffline():}
+		   else {streamOffline();}
 		 }
 		});
 
