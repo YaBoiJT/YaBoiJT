@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/main.css?revision=10-24-16" />
 		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 		<script src="js/streamFunctions.js?revision=9-22-16"></script>
-		<script src="js/vods.js"></script>
+		<script src="js/vods.js?revision=11-1-2016"></script>
 		<script src="js/fallbackAPI.js?revision=10-20-2016"></script>
 		<script src="js/status.js?revision=10-29-2016-1"></script>
 		<style type="text/css">
@@ -56,7 +56,7 @@
 						<h5 id="streaminfo" style="color:#FFF;"></h5>
 						<a id="popout-chat" href="#" onclick="javascript:window.open('https://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
 						<br />
-						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="#" height="450" width="800" onerror="this.src='img/vod-thumbnail-error-lg.png';" alt="thumbnail" />		
+						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3;" src="#" height="450" width="800";" alt="thumbnail" />		
 						<span class="button-play" style="margin-top:285px;" id="playButton"><a class="button big" onclick="pressPlay(); return false;"><strong style="color:#FFF;">Start Watching</strong></a></span>
 						<iframe style="z-index:2; resize: both; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
 						</div>
@@ -83,11 +83,17 @@
 										<p style="font-size: 18px; margin-top: -40px;">Click thumbnails to view</p>
 									</header>
 								</div>
+								
+								
 								<div class="4u 12u$(medium)" style="margin-left: -25px;">
-									<a id="vod1link" href="" style="border-bottom: none;" target="_blank"><img id="vod1img" src="#" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" alt="thumbnail 1" /></a>
+										<a id="vod1link" href="" style="border-bottom: none;" target="_blank"><img id="vod1img" src="#" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" alt="thumbnail 1" />
+										<h6 id="vod1title" style="text-align: center"></h6></a>
 								</div>
+								
+								
 								<div class="4u$ 12u$(medium) hidden-tablet" style="margin-left: 15px;">
-									<a id="vod2link" href="" style="border-bottom: none;" target="_blank"><img id="vod2img" src="#" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" alt="thumbnail 2" /></a>
+									<a id="vod2link" href="" style="border-bottom: none;" target="_blank"><img id="vod2img" src="#" class="nodrag" onerror="this.src='img/vod-thumbnail-error.png';" alt="thumbnail 2" />
+									<h6 id="vod2title" style="text-align: center;"></h6></a>
 								</div>
 								<div style="text-align: center;">
 								</div>

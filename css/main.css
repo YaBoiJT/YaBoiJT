@@ -67,6 +67,10 @@ width: 75%;
 	height: 400px;
 }
 
+.vodlink:hover {
+	color: #1CE736;
+}
+
 .fa { 
 	color: white;
 	color: rgba(255, 255, 255, 0.5);
