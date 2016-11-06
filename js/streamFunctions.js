@@ -7,6 +7,7 @@ var uptime;
 function displayTitle()
 {
 	document.getElementById('liveStatus').textContent = "is currently live";
+	document.getElementById('liveStatus-m').textContent = "is currently live";
 	function getInfo(){
 			
 $.ajax({
@@ -84,6 +85,7 @@ function streamOffline()
 		document.getElementById('vod-thumbnail').src = thumbHD;
 		document.getElementById('title').textContent = "Most recent broadcast:";
 		document.getElementById('liveStatus').textContent = "is currently offline";
+		document.getElementById('liveStatus-m').textContent = "is currently offline";
 		var title = data.videos[0].title;
 		var linkedTitle = title.replace("@YaBoiJT_", "<a href='https://twitter.com/yaboijt_'>@YaBoiJT_</a>");
    
