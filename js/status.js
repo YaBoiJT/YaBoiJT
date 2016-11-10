@@ -30,7 +30,7 @@ $.ajax({
 		document.getElementById('popout-chat').onclick = function () { window.open('https://www.twitch.tv/'+ data.hosts[0].target_login +'/chat', 'popoutChat', 'width=400,height=650'); return false; }
 		
 		pressPlay = function() {
-		document.getElementById('playButton').style.visibility = "hidden";
+		document.getElementById('button-play-link').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?channel=" + data.hosts[0].target_login +"&muted";
 		setTimeout(function() {
 		document.getElementById('vod-thumbnail').style.visibility = "hidden";
