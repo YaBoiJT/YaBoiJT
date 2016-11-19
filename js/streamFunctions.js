@@ -45,7 +45,7 @@ function onlineFrame()
 {
 	document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + username + "-1280x720.jpg";
 	pressPlay = function() {
-		document.getElementById('playButton').style.visibility = "hidden";
+		document.getElementById('button-play-link').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?channel=" + username +"&muted";
 		setTimeout(function() {
 		document.getElementById('vod-thumbnail').style.visibility = "hidden";
