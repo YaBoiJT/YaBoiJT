@@ -1,3 +1,8 @@
+/*
+	streamFunctions.js
+	Copyright (c) mattunderscore.color
+	All rights reserved
+*/
 var username = "yaboijt_gaming";
 
 var pressPlay;
@@ -43,7 +48,7 @@ $.ajax({
 
 function onlineFrame()
 {
-	document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + username + "-1280x720.jpg";
+	document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + username + "-800x450.jpg";
 	pressPlay = function() {
 		document.getElementById('button-play-link').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?channel=" + username +"&muted";
@@ -67,7 +72,7 @@ function streamOffline()
 	   	if (data._total == 0)
 		{
 			document.getElementById('title').textContent = "Error 404 - no stream data found";
-			document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/ttv-static/404_preview-1280x720.jpg";
+			document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/ttv-static/404_preview-800x450.jpg";
 			document.getElementById('button-play-link').style.visibility = "hidden";
 		}
 	   	 
@@ -80,7 +85,7 @@ function streamOffline()
 	   
 		var str2 = thumbRaw.split("-");
 		var noRes = str2[0] + "-" + str2[1];
-		var thumbHD = noRes + "-1280x720.jpg"
+		var thumbHD = noRes + "-800x450.jpg"
 		
 		document.getElementById('vod-thumbnail').src = thumbHD;
 		document.getElementById('title').textContent = "Most recent broadcast:";
@@ -92,7 +97,7 @@ function streamOffline()
 		document.getElementById('streaminfo').innerHTML = linkedTitle;
 		
 		pressPlay = function() {
-		document.getElementById('playButton').style.visibility = "hidden";
+		document.getElementById('button-play-link').style.visibility = "hidden";
 		document.getElementById('player').src = "https://player.twitch.tv/?video=" + data.videos[0]._id;
 		setTimeout(function() {
 		document.getElementById('vod-thumbnail').style.visibility = "hidden";

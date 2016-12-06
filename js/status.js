@@ -1,3 +1,8 @@
+/*
+	status.js
+	Copyright (c) mattunderscore.color
+	All rights reserved
+*/
 $.ajax({
  type: 'GET',
  url: 'https://api.twitch.tv/kraken/streams/' + username,
@@ -24,7 +29,7 @@ $.ajax({
 	   }
 	   else
 	   {
-		document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + data.hosts[0].target_login + "-1280x720.jpg";
+		document.getElementById('vod-thumbnail').src = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + data.hosts[0].target_login + "-800x450.jpg";
 		document.getElementById('liveStatus').textContent = "is currently hosting " + data.hosts[0].target_display_name;
 		document.getElementById('liveStatus-m').textContent = "is currently hosting " + data.hosts[0].target_display_name;
 		document.getElementById('popout-chat').onclick = function () { window.open('https://www.twitch.tv/'+ data.hosts[0].target_login +'/chat', 'popoutChat', 'width=400,height=650'); return false; }
