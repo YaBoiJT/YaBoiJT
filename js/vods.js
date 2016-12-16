@@ -15,6 +15,12 @@ function PopupCenter(url, title, w, h) {
         newWindow.focus();
     }
 }
+/*
+	vods.js
+	Copyright (c) mattunderscore.us
+	All rights reserved
+*/
+window.onload = function() {
 
 $.ajax({
  type: 'GET',
@@ -75,3 +81,4 @@ $.ajax({
  }
 });	
 
+}

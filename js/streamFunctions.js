@@ -1,6 +1,6 @@
 /*
 	streamFunctions.js
-	Copyright (c) mattunderscore.color
+	Copyright (c) mattunderscore.us
 	All rights reserved
 */
 var username = "yaboijt_gaming";
