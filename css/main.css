@@ -53,6 +53,35 @@
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 }
+.videobox { position: relative; }
+		
+		.videobox span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 4;
+			background: url(img/button-play.png) no-repeat center center;
+		}
+		div.loader {
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: transparent;
+			z-index: 10;
+			background-image: url(img/loader.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		#page-wrapper {
+			display: none;
+		}
 .greenLine {
 background: #1CE736;
 content: '';
@@ -3641,6 +3670,18 @@ section.support img {
 
 	#navPanel, #titleBar {
 		display: none;
+	}
+	
+	@media screen and (max-width: 800px) {
+		#footer {
+			padding: 3em 1.5em;
+		}
+		#footer .copyright li {
+			display: block;
+			margin: 1em 0 0 0;
+			padding: 0;
+			border: 0;
+		}
 	}
 
 	@media screen and (max-width: 736px) {
