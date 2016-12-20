@@ -5,3 +5,5 @@ notes for JT:
 -more detailed about section?
 
 corsaie k70 rgb brown
+
+webhook: https://discordapp.com/api/webhooks/241005970967232512/6JeF0EgmJLzjspyNBjE7Nu2rLtdSEVfX64kvMBHA_RarIBkBKk_dWoBkymFelo8o7Wgz/github
