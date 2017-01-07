@@ -8,9 +8,8 @@
 		<link rel="stylesheet" href="css/main.css?revision=12-19-16-2" />
 		<script src="js/jquery-3.1.0.min.js"></script>
 		<script src="js/streamFunctions.js?revision=12-15-2016"></script>
-		<script src="js/vods.js?revision=12-15-2016"></script>
-		<script src="js/fallbackAPI.js?revision=11-9-16"></script>
-		<script src="js/status.js?revision=12-15-2016"></script>		
+		<script src="js/vods.js?revision=1-6-2016"></script>
+		<script src="js/status.js?revision=1-6-2016"></script>		
 		<style type="text/css">
 		#page-wrapper {
 			display: none;
@@ -75,7 +74,7 @@
 						<a id="popout-chat" href="#" onclick="javascript:window.open('https://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
 						<div class="videobox">	
 						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3; height: 450px; width: 800px;" src="#" alt="thumbnail" />		
-						<a id="button-play-link" href="#" onclick="pressPlay(); return false;"><span class="button-play"></span></a>
+						<a id="button-play-link" href="#" onclick="pressPlay(); return false;"><span id="button-play-span" class="button-play"></span></a>
 						<iframe style="z-index:2; resize: both; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
 						</div>
 						</header>
