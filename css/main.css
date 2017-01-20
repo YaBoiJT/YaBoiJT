@@ -68,6 +68,13 @@ width: 75%;
 	height: 400px;
 }
 
+.toggleSwitch {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+	font-size: 36px !important;
+	cursor: pointer;
+}
+
 .vodlink:hover {
 	color: #1CE736;
 }

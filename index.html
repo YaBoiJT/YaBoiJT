@@ -5,11 +5,9 @@
 		<link rel="shortcut icon" href="img/favicon.ico" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/main.css?revision=12-19-16-2" />
+		<link rel="stylesheet" href="css/main.css?revision=1-19-17" />
 		<script src="js/jquery-3.1.0.min.js"></script>
-		<script src="js/streamFunctions.js?revision=1-18-2017"></script>
-		<script src="js/vods.js?revision=1-6-2016"></script>
-		<script src="js/status.js?revision=1-18-2016"></script>		
+				
 		<style type="text/css">
 		#page-wrapper {
 			display: none;
@@ -65,19 +63,36 @@
 				<section id="banner" style="width: 100%; margin: auto;">
 					<div class="content">
 						<header style="text-align: center;" class="hidden-phone">
-							<h2>YaBoiJT</h2>
+							<h2><a id="toggleToTwitch" class="fa fa-twitch toggleSwitch" onclick="toggleToTwitch()"></a>&nbsp;YaBoiJT&nbsp;<a id="toggleToYt" class="fa fa-youtube-play toggleSwitch" onclick="toggleToYt()"></a></h2>
 							<h5 id="liveStatus" style="margin-top:-15px;"></h5>
 							<span class="greenLine"></span>
-										
+						
+						
+						<div id="twitchContent">
 						<h4 id="title"></h4>
 						<h5 id="streaminfo" style="color:#FFF; margin-top: -20px"></h5>
 						<a id="popout-chat" href="#" onclick="javascript:window.open('https://www.twitch.tv/yaboijt_gaming/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
 						<div class="videobox">	
 						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3; height: 450px; width: 800px;" src="#" alt="thumbnail" />		
 						<a id="button-play-link" href="#" onclick="pressPlay(); return false;"><span id="button-play-span" class="button-play"></span></a>
-						<iframe style="z-index:2; resize: both; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
+						<iframe style="z-index:2; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
 						</div>
+						</div>
+						
+						<div id="ytContent">
+						
+						<h4>Most Recent YouTube Upload:</h4>
+						<h5 id="yt-title" style="color:#FFF"></h5>
+						<div class="videobox">		
+						<iframe id="yt-player" src="" style="z-index:2; border: none;" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
+						</div>
+						<div class="g-ytsubscribe" data-channelid="UCECMfx0jSbcspun_yzxKhVA" data-layout="full" data-count="default"></div>
+						</div>
+						
 						</header>
+						
+						
+						<!-- mobile -->
 						<header style="text-align: center;" class="visible-phone">
 							<h1 style="font-size: 40px;">YaBoiJT</h1>
 							<h5 id="liveStatus-m" style="margin-top:-40px;"></h5>
@@ -86,9 +101,14 @@
 							</form>
 							
 						</header>
+						
+						
 					</div>
+					
 					<a href="#one" class="goto-next scrolly hidden-phone">Next</a>
 				</section>
+				
+				
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom hidden-phone">
@@ -144,6 +164,10 @@
 		</div>
 
 		<!-- Scripts -->
+		<script src="js/streamFunctions.js?revision=1-19-2017"></script>
+		<script src="js/vods.js?revision=1-6-2016"></script>
+		<script src="js/status.js?revision=1-19-2016"></script>
+			<script src="https://apis.google.com/js/platform.js"></script>
 			<script src="js/jquery.scrolly.min.js"></script>
 			<script src="js/jquery.dropotron.min.js"></script>
 			<script src="js/jquery.scrollex.min.js"></script>

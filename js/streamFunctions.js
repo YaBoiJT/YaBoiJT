@@ -59,6 +59,36 @@ function onlineFrame()
 	}
 }
 
+function ytDisplay() {
+	$.ajax({
+		 type: 'GET',
+		 url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUECMfx0jSbcspun_yzxKhVA&maxResults=1&key=AIzaSyDRGoNzXk7wVpE2lCXG9SS7wPMZhmFSEhI',
+		 success: function(data) {
+			console.log(data);
+			document.getElementById('yt-title').innerHTML = data.items[0].snippet.title;
+			document.getElementById('yt-player').src = "https://www.youtube.com/embed/" + data.items[0].snippet.resourceId.videoId;
+			
+			
+		 }, //end success
+		 error: function () {
+		}
+		});	// end ajax
+}
+
+function toggleToTwitch() {
+	document.getElementById('twitchContent').style.display = "block";
+	document.getElementById('ytContent').style.display = "none";
+	document.getElementById('toggleToTwitch').style.color = "#6441A4";
+	document.getElementById('toggleToYt').style.color = "rgba(255, 255, 255, 0.5)";
+}
+
+function toggleToYt() {
+	document.getElementById('ytContent').style.display = "block";
+	document.getElementById('twitchContent').style.display = "none";
+	document.getElementById('toggleToYt').style.color = "#e52d27";
+	document.getElementById('toggleToTwitch').style.color = "rgba(255, 255, 255, 0.5)";
+}
+
 function streamOffline()
 {
 	$.ajax({
