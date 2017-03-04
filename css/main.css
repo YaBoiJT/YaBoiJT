@@ -53,6 +53,16 @@
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 }
+@media (max-width: 920px) {
+	.logoName {
+		display: none;
+	}
+}
+@media (max-width: 800px) {
+	h1#logo img {
+		display: none;
+	}
+}
 
 .greenLine {
 background: #1CE736;
