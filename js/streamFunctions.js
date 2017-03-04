@@ -3,7 +3,7 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  */
-var username = "yaboijt_gaming";
+var username = "yabaejt";
 
 var pressPlay;
 
