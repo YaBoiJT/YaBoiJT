@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Followage - YaBoiJT</title>
@@ -49,7 +49,7 @@
 			var username = document.getElementById('username').value;
 			
 			$.ajax({
-			url: "https://api.rtainc.co/twitch/channels/yabaejt/followers/" + username + "?format=[2]",
+			    url: "https://cors-anywhere.herokuapp.com/https://mcgamesdot.net/followage.php?channel=yaboijt&user=" + username,
 			success: function (data) {
 			
 			var displayUsername;
@@ -76,16 +76,29 @@
 			if (username != "")
 			{
 				
-					
-			setTimeout(function() {
 			document.getElementById('result').innerHTML = "<img src='img/loading-bar.gif' class='nodrag' />";
+			setTimeout(function() {
 			document.getElementById('prefix').innerHTML = 
 			"<a href='https://www.twitch.tv/" + displayUsername + "' target='_blank'><img src='" + userLogo + "' height='30' width='30' class='nodrag' style='vertical-align: middle;' title='" + displayUsername + "' /></a> has been following JT for";
 			}, 500);	
 			
 			
-			setTimeout(function() {
-			document.getElementById('result').textContent = data;
+			var dataSplit = data.split(", ");
+			var dataLength = dataSplit.length;
+
+			setTimeout(function () {
+			    if (dataLength == 1) {
+			        document.getElementById('result').textContent = dataSplit[0];
+			    }
+			    else if (dataLength > 1) {
+			        document.getElementById('result').textContent = dataSplit[0] + ", " + dataSplit[1];
+
+			    }
+
+			    else {
+			        document.getElementById('result').textContent = "(error)";
+			    }
+
 			}, 2000);
 			}
 			else 
