@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Followage - YaBoiJT</title>
+		<title>Followage - JayTuu</title>
 		<link rel="shortcut icon" href="img/favicon.ico" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,7 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="https://www.twitch.tv/yabaejt" target="_blank"><img src="img/logo-transparent.png?1" width="45" height="45" class="nodrag" style="vertical-align:middle; margin-right: 5px;" alt="logo" /><span class="logoName">Twitch.tv/YaBaeJT</span></a></h1>
+					<h1 id="logo"><a href="https://www.twitch.tv/JayTuu" target="_blank"><img src="img/logo-transparent.png?1" width="45" height="45" class="nodrag" style="vertical-align:middle; margin-right: 5px;" alt="logo" /><span class="logoName">Twitch.tv/JayTuu</span></a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="//yaboijt.com">Home</a></li>
@@ -35,7 +35,7 @@
 						</header>
 
 						<!-- Text -->
-								<input type="text" id="username" placeholder="Twitch Username" style="font-size: 14px; text-align: center; color: white; width: 180px; margin: auto;" autofocus> 
+								<input type="text" id="username" placeholder="Twitch Username" style="font-size: 14px; text-align: center; color: white; width: 180px; margin: auto;" autofocus>
 								<section style="margin: auto; text-align:center;">
 								<input id="followageButton" class="button special" type="button" onclick="getFollowage()" style="font-size: 12px; margin-top: 5px; width: 180px;" value="Check Followage" />
 								<div style="margin-top: 10px;">
@@ -45,16 +45,16 @@
 							</section>
 							<script type="text/javascript">
 			function getFollowage(){
-			
+
 			var username = document.getElementById('username').value;
-			
+
 			$.ajax({
-			    url: "https://cors-anywhere.herokuapp.com/https://mcgamesdot.net/followage.php?channel=yabaejt&user=" + username,
+			    url: "https://cors-anywhere.herokuapp.com/https://mcgamesdot.net/followage.php?channel=JayTuu&user=" + username,
 			success: function (data) {
-			
+
 			var displayUsername;
 			var userLogo;
-			
+
 			$.ajax({
 			 type: 'GET',
 			 url: 'https://api.twitch.tv/kraken/channels/' + username,
@@ -75,14 +75,14 @@
 					});
 			if (username != "")
 			{
-				
+
 			document.getElementById('result').innerHTML = "<img src='img/loading-bar.gif' class='nodrag' />";
 			setTimeout(function() {
-			document.getElementById('prefix').innerHTML = 
+			document.getElementById('prefix').innerHTML =
 			"<a href='https://www.twitch.tv/" + displayUsername + "' target='_blank'><img src='" + userLogo + "' height='30' width='30' class='nodrag' style='vertical-align: middle;' title='" + displayUsername + "' /></a> has been following JT for";
-			}, 500);	
-			
-			
+			}, 500);
+
+
 			var dataSplit = data.split(", ");
 			var dataLength = dataSplit.length;
 
@@ -101,31 +101,31 @@
 
 			}, 2000);
 			}
-			else 
+			else
 			{
 			document.getElementById('prefix').textContent = "";
 			document.getElementById('result').innerHTML = "<img src='img/loading-bar.gif' class='nodrag' />";
-			
+
 			setTimeout(function() {
 			document.getElementById('result').textContent = "(error)";
 			}, 2000);
-			
+
 			}
-			
-			
-			
+
+
+
 			},
 			dataType: "html",
 			error: function (data) {
 			document.getElementById('prefix').textContent = "";
 			document.getElementById('result').innerHTML = "<img src='img/loading-bar.gif' class='nodrag' />";
-			
+
 			setTimeout(function() {
 			document.getElementById('result').textContent = "(error)";
 			}, 2000);}
 			});
 			}
-			
+
 			$("#username").keyup(function(event){
 			if(event.keyCode == 13){
 			$("#followageButton").click();
@@ -138,14 +138,14 @@
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="https://www.twitch.tv/yabaejt" class="fa fa-twitch"></a></li>
+						<li><a href="https://www.twitch.tv/JayTuu" class="fa fa-twitch"></a></li>
 						<li><a href="https://twitter.com/yabaejt" class="fa fa-twitter"></a></li>
 						<li><a href="https://www.youtube.com/c/yaboijt" class="fa fa-youtube-play"></a></li>
 						<li><a href="https://www.instagram.com/yaboijt" class="fa fa-instagram"></a></li>
-						<li><a href="https://www.snapchat.com/add/yabaejt" class="fa fa-snapchat-ghost"></a></li>
+						<li><a href="https://www.snapchat.com/add/JayTuu" class="fa fa-snapchat-ghost"></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>Copyright &copy; YaBoiJT 2016-2017. All rights reserved.</li>
+						<li>Copyright &copy; JayTuu 2016-2017. All rights reserved.</li>
 						<li>Developed by <a href="https://mattjones.one">Matt Jones</a></li>
 						<li>Designed by <a href="https://html5up.net">HTML5 UP</a></li>
 						<li><a href="https://github.com/YaBoiJT/YaBoiJT/issues">Report an issue</a></li>
