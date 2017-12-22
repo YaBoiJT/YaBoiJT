@@ -21,7 +21,7 @@ $.ajax({
  type: 'GET',
  url: 'https://api.twitch.tv/kraken/channels/' + username + '/videos?broadcasts=true',
  headers: {
-   'Client-ID': 'f2cmg4s30fnzmq7zbcx8rcsfxdc1san'
+   'Client-ID': clientId
  },
  success: function(data) {
    console.log(data);

@@ -5,40 +5,9 @@
 		<link rel="shortcut icon" href="img/favicon.ico" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/main.css?revision=3-4-2017" />
+		<link rel="stylesheet" href="css/main.css?revision=12-21-2017-0" />
 		<script src="js/jquery-3.1.0.min.js"></script>
 
-		<style type="text/css">
-		#page-wrapper {
-			display: none;
-		}
-		.videobox { position: relative; }
-
-		.videobox span {
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			z-index: 4;
-			background: url(img/button-play.png) no-repeat center center;
-		}
-		div.loader {
-			position: fixed;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			background-color: transparent;
-			z-index: 10;
-			background-image: url(img/loader.svg);
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-		</style>
 	</head>
 	<body class="landing">
 	<div class="loader" id="loader"></div>
@@ -73,9 +42,7 @@
 						<h5 id="streaminfo" style="color:#FFF; margin-top: -20px"></h5>
 						<a id="popout-chat" href="#" onclick="javascript:window.open('https://www.twitch.tv/JayTuu/chat', 'popoutChat', 'width=400,height=650'); return false;" style="font-size: 12px; margin-top:-60px;">Pop-out chat</a>
 						<div class="videobox">
-						<img id="vod-thumbnail" class="nodrag" style="position:absolute;z-index:3; height: 450px; width: 800px;" src="#" alt="thumbnail" />
-						<a id="button-play-link" href="#" onclick="pressPlay(); return false;"><span id="button-play-span" class="button-play"></span></a>
-						<iframe style="z-index:2; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
+							<iframe style="z-index:2; border: none;" id="player" class="twitch-player" height="450" width="800" allowfullscreen></iframe>
 						</div>
 						</div>
 
@@ -164,9 +131,9 @@
 		</div>
 
 		<!-- Scripts -->
-		<script src="js/streamFunctions.js?revision=3-4-2017"></script>
+		<script src="js/streamFunctions.js?revision=12-21-2017-0"></script>
 		<script src="js/vods.js?revision=1-6-2017"></script>
-		<script src="js/status.js?revision=3-4-2017"></script>
+		<script src="js/status.js?revision=12-21-2017-0"></script>
 			<script src="https://apis.google.com/js/platform.js"></script>
 			<script src="js/jquery.scrolly.min.js"></script>
 			<script src="js/jquery.dropotron.min.js"></script>

@@ -47,12 +47,32 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
-	
+
 .nodrag {
 	user-drag: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 }
+#page-wrapper {
+	display: none;
+}
+.videobox { position: relative; }
+
+div.loader {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: transparent;
+	z-index: 10;
+	background-image: url(../img/loader.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 @media (max-width: 920px) {
 	.logoName {
 		display: none;
@@ -89,7 +109,7 @@ width: 75%;
 	color: #1CE736;
 }
 
-.fa { 
+.fa {
 	color: white;
 	color: rgba(255, 255, 255, 0.5);
 	font-size: 28px;
@@ -3660,7 +3680,7 @@ section.support img {
 	#navPanel, #titleBar {
 		display: none;
 	}
-	
+
 	@media screen and (max-width: 800px) {
 		#footer {
 			padding: 3em 1.5em;
