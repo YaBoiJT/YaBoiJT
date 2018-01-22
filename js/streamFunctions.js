@@ -91,9 +91,8 @@ function streamOffline() {
 			$("#title").text("Most recent broadcast:");
 			$("#liveStatus").text("is currently offline");
 			$("#liveStatus-m").text("is currently offline");
-			var title = data.videos[0].title;
-			var linkedTitle = title.replace("@YaBoiJT_", "<a href='https://twitter.com/yaboijt_'>@YaBoiJT_</a>");
-			$("#streaminfo").html(linkedTitle);
+			$("#streaminfo").html(data.videos[0].title);
+			$("#player").attr("src", "https://player.twitch.tv/?video=" + data.videos[0]._id + "&autoplay=false");
 
 		 }
 	});
