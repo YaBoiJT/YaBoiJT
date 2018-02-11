@@ -96,6 +96,8 @@ width: 75%;
 .aboutImg {
 	width: 300px;
 	height: 400px;
+	float: left;
+	margin-right: 1em;
 }
 
 .toggleSwitch {
@@ -122,8 +124,7 @@ width: 75%;
 
 @media (max-width: 767px) {
 	.aboutImg {
-		width: 250px;
-		height: 334px;
+		display: none;
 	}
 }
 
